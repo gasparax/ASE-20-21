@@ -8,6 +8,12 @@ def sum(m, n):
 
 
 def divide(m, n):
+    if n == 0:
+        raise ZeroDivisionError
+    m = abs(m)
+    n = abs(n)
+    result = 0
     while m > 0:
+        result += 1
         m -= n
     return m
